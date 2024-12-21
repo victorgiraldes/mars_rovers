@@ -49,7 +49,7 @@ class Rover
     case instruction
     when 'L' then turn_left
     when 'R' then turn_right
-    when 'M' then move
+    when 'M' then move_forward
     end
   end
 end
