@@ -43,16 +43,16 @@ Este projeto tem como objetivo desenvolver sondas para explorar a superfície de
   ```
 ### Modelo de arquivo de entrada
   ```bash
-  5 5
-  1 2 N
-  LMLMLMLMM
-  3 3 E
-  MMRMMRMRRM
+  5 5 <- Identifica o tamanho do platô
+  1 2 N <- Identifica a posição do primeira sonda
+  LMLMLMLMM <- Intruções para a sonda
+  3 3 E <- Identifica a posição da segunda sonda
+  MMRMMRMRRM <- Intruções para a sonda
   ```
 ### Modelo de arquivo de saida
   ```bash
-  1 3 N
-  5 1 E
+  1 3 N <- Posição da primeira sonda
+  5 1 E <- Posição da segunda sonda
   ```
 
 ### Execução dos testes
