@@ -11,6 +11,7 @@ Este projeto tem como objetivo desenvolver sondas para explorar a superfície de
 ### Tecnologias Utilizadas
 
 - Ruby on Rails
+- RSpec para testes
 
 ### Como Executar
 
@@ -26,42 +27,40 @@ Este projeto tem como objetivo desenvolver sondas para explorar a superfície de
   ```bash
   bundle install
   ```
-4. De a permissão ao arquivo run
+4. Dê permissão ao arquivo de execução:
   ```bash
   chmod +x bin/run
   ```  
-5. Executar os commandos para execução das instruções da sonda:
+5. Execute os comandos para iniciar as instruções da sonda:
   ```bash
   bin/run file.txt
   ```
-6. Arquivo de saida de resultados(Detalhes da localização da sonsa)
+6. Verifique o arquivo de saída com os resultados (detalhes da localização da sonda):
   ```bash
   public/output.txt
   ```
-# Descrição das entidades
 
-## Plateau
+### Execução dos testes
+  ```bash
+  bundle exec rspec
+  ```
 
-A entidade Plateau é responsável por armazenar os dados do Plato como o limite do mesmo.
+### Descrição das Entidades
 
-## Rover
+#### Plateau
 
-A entidade Rover é responsável por coordenar a orientação da sonda. (L, R, M)
+A entidade Plateau é responsável por armazenar os dados do platô, como seus limites.
 
-# Descrição do services
+#### Rover
 
-## Read Rover Commands
+A entidade Rover é responsável por coordenar a orientação da sonda (L, R, M).
 
-Este serviço é responsável por fazer a leitura do arquivo de entrada e validar os dados assim como gerar o arquivo de saída com a ocalização atual da sonda.
+### Descrição dos Serviços
 
-## Rover Command Runner
+#### Read Rover Commands
+
+Este serviço é responsável por ler o arquivo de entrada, validar os dados e gerar o arquivo de saída com a localização atual da sonda.
+
+#### Rover Command Runner
 
 Este serviço é responsável por executar as instruções da sonda.
-
-### Contribuição
-
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e enviar pull requests.
-
-### Licença
-
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
