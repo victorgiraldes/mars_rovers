@@ -15,6 +15,11 @@ Este projeto tem como objetivo desenvolver sondas para explorar a superfície de
 - Factorybot para popular os dados para os testes
 - Simplecov(Cobertura de testes)
 
+### Requisitos
+
+- Ruby 3.3.6
+- Bundler
+
 ### Como Executar
 
 1. Clone o repositório:
