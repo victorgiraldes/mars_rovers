@@ -11,10 +11,15 @@ class RoverCommandRunner
     instructions.each_char do |instruction|
       raise InvalidInstructionException.new unless VALID_INSTRUCTIONS.include?(instruction)
 
-      case instruction
-      when 'L' then @rover.turn_left
-      when 'R' then @rover.turn_right
-      when 'M' then @rover.move_forward
+      case instruction.upcase
+      when 'L'
+        @rover.turn_left
+      when 'R'
+        @rover.turn_right
+      when 'M'
+        @rover.move_forward
+      else
+        raise InvalidInstructionException.new("Invalid instruction: #{instruction}")
       end
     end
   end
