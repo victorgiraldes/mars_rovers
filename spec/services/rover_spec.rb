@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Rover' do
+RSpec.describe Rover do
   let(:plateau) { build(:plateau) }
   let(:rover) { Rover.new(1, 2, 'N', plateau) }
 
