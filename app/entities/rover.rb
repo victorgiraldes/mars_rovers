@@ -18,6 +18,7 @@ class Rover
     @plateau = plateau
 
     raise InvalidDirectionException.new unless VALID_DIRECTIONS.include?(@direction)
+    check_within_bounds
   end
 
   # Turns the rover to the left.
@@ -41,7 +42,7 @@ class Rover
     when 'W' then @x -= 1
     end
 
-    raise RoverOutPlateauBoundsException.new unless @plateau.within_bounds?(@x, @y)
+    check_within_bounds
   end
 
   # Returns the current position of the rover.
@@ -49,5 +50,14 @@ class Rover
   # @return [String] the current position of the rover in the format "x y direction"
   def position
     "#{@x} #{@y} #{@direction}"
+  end
+
+  private
+
+  # Checks if the rover is within the bounds of the plateau.
+  #
+  # @raise [RoverOutPlateauBoundsException] if the rover is out of the plateau bounds
+  def check_within_bounds
+    raise RoverOutPlateauBoundsException.new unless @plateau.within_bounds?(@x, @y)
   end
 end
