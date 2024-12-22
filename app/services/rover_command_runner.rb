@@ -18,8 +18,6 @@ class RoverCommandRunner
         @rover.turn_right
       when 'M'
         @rover.move_forward
-      else
-        raise InvalidInstructionException.new("Invalid instruction: #{instruction}")
       end
     end
   end
