@@ -11,10 +11,10 @@ class Rover
   # @param direction [String] the initial direction of the rover
   # @param plateau [Plateau] the plateau on which the rover is located
   # @raise [InvalidDirectionException] if the direction is not valid
-  def initialize(x, y, direction, plateau)
+  def initialize(x, y, initial_direction, plateau)
     @x = x
     @y = y
-    @direction = direction
+    @direction = initial_direction
     @plateau = plateau
 
     raise InvalidDirectionException.new unless VALID_DIRECTIONS.include?(@direction)
