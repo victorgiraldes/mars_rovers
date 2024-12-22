@@ -15,11 +15,6 @@ Este projeto tem como objetivo desenvolver sondas para explorar a superfície de
 - Factorybot para popular os dados para os testes
 - Simplecov(Cobertura de testes)
 
-### Requisitos
-
-- Ruby 3.3.6
-- Bundler
-
 ### Como Executar
 
 1. Clone o repositório:
@@ -91,3 +86,17 @@ Este caso de uso é responsável por ler o arquivo de entrada, validar os dados 
 #### Rover Command Runner
 
 Este serviço é responsável por executar as instruções da sonda.
+
+### Tipos de Erros
+
+#### InvalidDirectionException
+
+Esta exceção é levantada quando uma direção inválida é fornecida ao rover.
+
+#### RoverOutPlateauBoundsException
+
+Esta exceção é levantada quando o rover tenta se mover para fora dos limites do plateau.
+
+#### InvalidInstructionException
+
+Esta exceção é levantada quando a instrução fornecida ao rover é desconhecida.
