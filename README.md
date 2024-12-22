@@ -30,10 +30,33 @@ Este projeto tem como objetivo desenvolver sondas para explorar a superfície de
   ```bash
   chmod +x bin/run
   ```  
-4. Executar os commandos para execução das instruções da sonda:
+5. Executar os commandos para execução das instruções da sonda:
   ```bash
   bin/run file.txt
   ```
+6. Aqruivo de saida de resultados(Detalhes da localização da sonsa)
+  ```bash
+  public/output.txt
+  ```
+# Descrição das entidades
+
+## Plateau
+
+A entidade Plateau é responsável por armazenar os dados do Plato como o limite do mesmo.
+
+## Rover
+
+A entidade Rover é responsável por coordenar a orientação da sonda. (L, R, M)
+
+#Descrição do services
+
+## Read Rover Commands
+
+Este serviço é responsável por fazer a leitura do arquivo de entrada e validar os dados assim como gerar o arquivo de saída com a ocalização atual da sonda.
+
+## Rover Command Runner
+
+Este serviço é responsável por executar as instruções da sonda.
 
 ### Contribuição
 
