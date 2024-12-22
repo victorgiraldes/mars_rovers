@@ -61,6 +61,8 @@ A entidade Rover é responsável por coordenar a orientação da sonda (L, R, M)
 
 Este caso de uso é responsável por ler o arquivo de entrada, validar os dados e gerar o arquivo de saída com a localização atual da sonda.
 
+### Descrição dos serviços
+
 #### Rover Command Runner
 
-Este caso de uso é responsável por executar as instruções da sonda.
+Este serviço é responsável por executar as instruções da sonda.
