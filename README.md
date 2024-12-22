@@ -55,12 +55,12 @@ A entidade Plateau é responsável por armazenar os dados do platô, como seus l
 
 A entidade Rover é responsável por coordenar a orientação da sonda (L, R, M).
 
-### Descrição dos Serviços
+### Descrição dos casos de uso
 
 #### Read Rover Commands
 
-Este serviço é responsável por ler o arquivo de entrada, validar os dados e gerar o arquivo de saída com a localização atual da sonda.
+Este caso de uso é responsável por ler o arquivo de entrada, validar os dados e gerar o arquivo de saída com a localização atual da sonda.
 
 #### Rover Command Runner
 
-Este serviço é responsável por executar as instruções da sonda.
+Este caso de uso é responsável por executar as instruções da sonda.
