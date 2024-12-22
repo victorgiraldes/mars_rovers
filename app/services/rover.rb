@@ -2,7 +2,6 @@
 
 class Rover
   VALID_DIRECTIONS = %w(N E S W).freeze
-  VALID_INSTRUCTIONS = %w(L R M).freeze
 
   def initialize(x, y, direction, plateau)
     @x = x
