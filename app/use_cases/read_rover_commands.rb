@@ -47,9 +47,9 @@ class ReadRoverCommands
   # @return [Plateau] the plateau
   # @raise [InvalidPlateauBoundsException] if the plateau bounds are invalid
   def plateau
-    plateau_location = rover_commands_file.first.split(' ')
+    plateau_size = rover_commands_file.first.split(' ')
 
-    raise InvalidPlateauBoundsException.new unless plateau_location.all? { |loc| loc =~ /^\d+$/ }
-    @plateau ||= @plateau_class.new(*plateau_location.map(&:to_i))
+    raise InvalidPlateauBoundsException.new unless plateau_size.all? { |loc| loc =~ /^\d+$/ }
+    @plateau ||= @plateau_class.new(*plateau_size.map(&:to_i))
   end
 end
