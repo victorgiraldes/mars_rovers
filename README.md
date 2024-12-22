@@ -100,3 +100,7 @@ Esta exceção é levantada quando o rover tenta se mover para fora dos limites 
 #### InvalidInstructionException
 
 Esta exceção é levantada quando a instrução fornecida ao rover é desconhecida.
+
+#### InvalidPlateauBoundsException
+
+Esta exceção é levantada quando os parâmetros de entrada do plato não são números ou estão incompletos

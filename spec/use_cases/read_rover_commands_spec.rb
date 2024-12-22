@@ -21,5 +21,10 @@ RSpec.describe ReadRoverCommands do
 
       subject.call
     end
+
+    it 'should raise an exception if the plateau bounds are invalid' do
+      allow(File).to receive(:read).and_return("5 B\n1 2 N\nLMLMLMLMM")
+      expect { subject.call }.to raise_error(InvalidPlateauBoundsException)
+    end
   end
 end
