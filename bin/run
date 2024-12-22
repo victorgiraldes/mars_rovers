@@ -7,4 +7,9 @@ if ARGV.empty?
   exit 1
 end
 
+unless ARGV[0].end_with?('.txt')
+  puts "Please provide a valid format file"
+  exit 1
+end
+
 ReadRoverCommands.new(path: ARGV[0]).call
