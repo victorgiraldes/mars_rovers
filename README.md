@@ -34,7 +34,7 @@ Este projeto tem como objetivo desenvolver sondas para explorar a superfície de
   ```bash
   bin/run file.txt
   ```
-6. Aqruivo de saida de resultados(Detalhes da localização da sonsa)
+6. Arquivo de saida de resultados(Detalhes da localização da sonsa)
   ```bash
   public/output.txt
   ```
