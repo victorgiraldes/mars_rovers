@@ -1,10 +1,11 @@
 # frozen_string_literal: true
 
 class ReadRoverCommands
-  def initialize(path:, command_runner: RoverCommandRunner)
+  def initialize(path:, command_runner_class: RoverCommandRunner, plateau_class: Plateau)
     @path = path
     @rovers = []
-    @command_runner = command_runner
+    @command_runner_class = command_runner_class
+    @plateau_class = plateau_class
   end
 
   def call
@@ -12,7 +13,7 @@ class ReadRoverCommands
       x, y, direction = rover_position.split(' ')
       rover = Rover.new(x.to_i, y.to_i, direction, plateau)
 
-      @command_runner.new(rover).call(rover_instructions)
+      @command_runner_class.new(rover).call(rover_instructions)
 
       @rovers << rover
     end
@@ -27,6 +28,6 @@ class ReadRoverCommands
   end
 
   def plateau
-    @plateau ||= Plateau.new(*file.first.split(' ').map(&:to_i))
+    @plateau ||= @plateau_class.new(*file.first.split(' ').map(&:to_i))
   end
 end
