@@ -50,7 +50,7 @@ Este projeto tem como objetivo desenvolver sondas para explorar a superfície de
 ### Modelo de arquivo de entrada
   ```bash
   5 5 <- Identifica o tamanho do platô
-  1 2 N <- Identifica a posição do primeira sonda
+  1 2 N <- Identifica a posição da primeira sonda
   LMLMLMLMM <- Intruções para a sonda
   3 3 E <- Identifica a posição da segunda sonda
   MMRMMRMRRM <- Intruções para a sonda
