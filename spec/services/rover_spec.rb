@@ -27,17 +27,4 @@ RSpec.describe 'Rover' do
     rover = Rover.new(5, 5, 'N', plateau)
     expect { rover.move_forward }.to raise_error(RoverOutPlateauBoundsException)
   end
-
-  it 'should execute instructions' do
-    rover.call('L')
-    rover.call('M')
-    rover.call('L')
-    rover.call('M')
-    rover.call('L')
-    rover.call('M')
-    rover.call('L')
-    rover.call('M')
-    rover.call('M')
-    expect(rover.position).to eq('1 3 N')
-  end
 end

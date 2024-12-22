@@ -2,6 +2,7 @@
 
 class Rover
   VALID_DIRECTIONS = %w(N E S W).freeze
+  VALID_INSTRUCTIONS = %w(L R M).freeze
 
   def initialize(x, y, direction, plateau)
     @x = x
@@ -13,21 +14,11 @@ class Rover
   end
 
   def turn_left
-    case @direction
-    when 'N' then @direction = 'W'
-    when 'W' then @direction = 'S'
-    when 'S' then @direction = 'E'
-    when 'E' then @direction = 'N'
-    end
+    @direction = VALID_DIRECTIONS[(VALID_DIRECTIONS.index(@direction) - 1) % VALID_DIRECTIONS.size]
   end
 
   def turn_right
-    case @direction
-    when 'N' then @direction = 'E'
-    when 'E' then @direction = 'S'
-    when 'S' then @direction = 'W'
-    when 'W' then @direction = 'N'
-    end
+    @direction = VALID_DIRECTIONS[(VALID_DIRECTIONS.index(@direction) + 1) % VALID_DIRECTIONS.size]
   end
 
   def move_forward
@@ -43,13 +34,5 @@ class Rover
 
   def position
     "#{@x} #{@y} #{@direction}"
-  end
-
-  def call(instruction)
-    case instruction
-    when 'L' then turn_left
-    when 'R' then turn_right
-    when 'M' then move_forward
-    end
   end
 end

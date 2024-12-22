@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require_relative '../config/environment'
+
+if ARGV.empty?
+  puts "Usage: bin/run <command>"
+  exit 1
+end
+
+ReadRoverCommands.new(path: ARGV[0]).call
