@@ -1,6 +1,14 @@
 # frozen_string_literal: true
 
+# Reads and executes rover commands from a file.
 class ReadRoverCommands
+
+  # Initializes a new ReadRoverCommands.
+  #
+  # @param path [String] the path to the file containing the rover commands
+  # @param command_runner_class [Class] the class used to run commands on the rover
+  # @param plateau_class [Class] the class used to create the plateau
+  # @param file [Class] the file class used to read and write files
   def initialize(path:, command_runner_class: RoverCommandRunner, plateau_class: Plateau, file: File)
     @path = path
     @rovers = []
@@ -9,6 +17,7 @@ class ReadRoverCommands
     @file = file
   end
 
+  # Reads the rover commands from the file and executes them.
   def call
     rover_commands_file[1..-1].each_slice(2) do |rover_position, rover_instructions|
       x, y, direction = rover_position.split(' ')
@@ -24,10 +33,18 @@ class ReadRoverCommands
     end
   end
 
+  private
+
+  # Reads the rover commands from the file.
+  #
+  # @return [Array<String>] the lines of the file
   def rover_commands_file
     @rover_commands_file ||= @file.read(@path).strip.split("\n")
   end
 
+  # Creates the plateau from the first line of the file.
+  #
+  # @return [Plateau] the plateau
   def plateau
     @plateau ||= @plateau_class.new(*rover_commands_file.first.split(' ').map(&:to_i))
   end
