@@ -58,6 +58,11 @@ Este projeto tem como objetivo desenvolver sondas para explorar a superfície de
   bundle exec rspec
   ```
 
+### (Simplecov) Localização do arquivo com a cobertura dos testes
+  ```bash
+  coverage/index.html
+  ```
+
 ### Descrição das Entidades
 
 #### Plateau
