@@ -39,7 +39,7 @@ Este projeto tem como objetivo desenvolver sondas para explorar a superfície de
   ```bash
   public/output.txt
   ```
-###Modelo de arquivo de entrada
+### Modelo de arquivo de entrada
   ```bash
   5 5
   1 2 N
@@ -47,7 +47,7 @@ Este projeto tem como objetivo desenvolver sondas para explorar a superfície de
   3 3 E
   MMRMMRMRRM
   ```
-###Modelo de arquivo de saida
+### Modelo de arquivo de saida
   ```bash
   1 3 N
   5 1 E
