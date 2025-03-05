@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: "pt-BR"
+reviews:
+  high_level_summary: true
+  request_changes_workflow: true
+  poem: true
+  sequence_diagrams: true
+  review_status: true
+  collapse_walkthroughs: true
