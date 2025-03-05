@@ -26,6 +26,8 @@ class RoverCommandRunner
         @rover.turn_right
       when 'M'
         @rover.move_forward
+      when 'B'
+        @rover.move_backward
       end
     end
   end
